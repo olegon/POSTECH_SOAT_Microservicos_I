@@ -28,8 +28,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 sqs = boto3.client('sqs', 
                    endpoint_url='http://localstack:4566', 
                    region_name='us-east-1',
-                   aws_access_key_id='LKIAQCCCCCCCK7TDMD7S',
-                   aws_secret_access_key='6TfUN3ksRFSYv15hlPCtkNMLpzxHH5IVLBDu+E7V')
+                   aws_access_key_id='localstack',
+                   aws_secret_access_key='localstack')
 
 def send_to_sqs(queue_name: str, message_body: str):
     try:

@@ -41,6 +41,7 @@ services:
   estoque-1:
     build: estoque/
     hostname: estoque-1
+    restart: on-failure
     depends_on:
       - db-estoque
     networks:
@@ -49,6 +50,16 @@ services:
   estoque-2:
     build: estoque/
     hostname: estoque-2
+    restart: on-failure
+    depends_on:
+      - db-estoque
+    networks:
+      - fiap-store
+
+  estoque-3:
+    build: estoque/
+    hostname: estoque-3
+    restart: on-failure
     depends_on:
       - db-estoque
     networks:
