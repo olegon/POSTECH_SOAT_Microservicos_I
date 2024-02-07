@@ -18,6 +18,7 @@ services:
       - LOCALSTACK_PERSISTENCE=1
     volumes:
       - "localstack_data:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
       - fiap-store
 

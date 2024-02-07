@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Optional, List
 from domain.entities import Produto, ItemKit
 
-class ProdutoRepository(ABC):
+class ProdutoRepository(ABC): # pragma: no cover
     @abstractmethod
     def inserir(self, produto: Produto, on_duplicate_sku: Exception):
         pass
